@@ -1,0 +1,27 @@
+{
+  "Parameters": {
+    "SerialNumber": { "Type": "String" },
+    "AWS::IoT::Certificate::Id": { "Type": "String" }
+  },
+  "Resources": {
+    "thing": {
+      "Type": "AWS::IoT::Thing",
+      "Properties": {
+        "ThingName": { "Fn::Join": ["", ["boiler-", { "Ref": "SerialNumber" }]] },
+        "AttributePayload": { "serialNumber": { "Ref": "SerialNumber" }, "model": "boiler-ctl" }
+      }
+    },
+    "certificate": {
+      "Type": "AWS::IoT::Certificate",
+      "Properties": {
+        "CertificateId": { "Ref": "AWS::IoT::Certificate::Id" },
+        "Status": "ACTIVE",
+        "ThingPrincipalType": "EXCLUSIVE_THING"
+      }
+    },
+    "policy": {
+      "Type": "AWS::IoT::Policy",
+      "Properties": { "PolicyName": "boiler-device-policy" }
+    }
+  }
+}

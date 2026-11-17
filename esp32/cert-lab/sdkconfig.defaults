@@ -1,0 +1,31 @@
+# ---- common to every cert-lab mode (target: esp32c5) ----
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"
+
+# ---- OTA rollback ----
+CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=y
+
+# ---- signed apps WITHOUT hardware Secure Boot (no eFuse is touched) ----
+# CONFIG_SECURE_BOOT is deliberately NOT set. Do not enable it for this lab.
+CONFIG_SECURE_SIGNED_APPS_NO_SECURE_BOOT=y
+CONFIG_SECURE_SIGNED_APPS_ECDSA_V2_SCHEME=y
+CONFIG_SECURE_BOOT_ECDSA_KEY_LEN_256_BITS=y
+CONFIG_SECURE_SIGNED_ON_UPDATE_NO_SECURE_BOOT=y
+# course-only signing key (made by make_pki.sh); path is relative to the project dir
+CONFIG_SECURE_BOOT_SIGNING_KEY="../demo-pki/ota/lab_ota_key.pem"
+
+# ---- version string shown in logs / compared by OTA ----
+CONFIG_APP_PROJECT_VER_FROM_CONFIG=y
+CONFIG_APP_PROJECT_VER="1.0.0"
+
+# ---- TLS: lab root is embedded as cert_pem, the public bundle is not needed ----
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=n
+CONFIG_ESP_TLS_INSECURE=n
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=4096
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y
+
+# ---- IMPORTANT: the certificate validity-date check is OFF by default in ESP-IDF ----
+# Without this, a clock at 1970 or an expired certificate is silently accepted.
+CONFIG_MBEDTLS_HAVE_TIME_DATE=y

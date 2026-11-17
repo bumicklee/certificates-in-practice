@@ -1,0 +1,54 @@
+# 실행할 때 만들어지는 키·인증서·결과 (저장소에 올리지 않는다)
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+out/
+keys/
+results/*
+!results/.gitkeep
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.pid
+*.log
+
+# 실습 폴더가 만드는 파일
+cert-inventory/fixtures/
+well-known/site/
+well-known/site-broken/
+embedded-ota/device/
+mobile-pins/res/
+step-ca/sshd/user_ca.pub
+ct-watch/state/
+supply-chain/.docker/
+
+# ESP32 (Wi-Fi 값은 build/_local.defaults에만 들어간다)
+esp32/demo-pki/
+esp32/build/
+esp32/ota-images/
+esp32/backups/
+esp32/cert-lab/sdkconfig
+esp32/cert-lab/sdkconfig.old
+esp32/qemu-sb/keys/
+esp32/qemu-sb/out/
+esp32/qemu-sb/app/sdkconfig
+esp32/qemu-sb/app/sdkconfig.old
+esp32/qemu-sb/app/build/
+dependencies.lock
+managed_components/
+
+# Android
+android/*/build/
+android/*/app/build/
+android/*/.gradle/
+.gradle/
+.idea/
+.kotlin/
+local.properties
+*.apk
+*.aab
+android/android-tls-app/app/src/main/res/raw/lab_root.pem
+android/android-tls-app/app/src/main/res/xml/nsc_pin_*.xml

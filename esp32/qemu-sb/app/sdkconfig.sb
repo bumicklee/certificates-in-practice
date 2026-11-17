@@ -1,0 +1,11 @@
+# Secure Boot v2 (QEMU only). ESP32-C3 supports only RSA-3072 for Secure Boot v2 (no ECDSA).
+CONFIG_SECURE_BOOT=y
+CONFIG_SECURE_BOOT_V2_ENABLED=y
+CONFIG_SECURE_SIGNED_APPS_RSA_SCHEME=y
+CONFIG_SECURE_BOOT_BUILD_SIGNED_BINARIES=y
+CONFIG_SECURE_BOOT_SIGNING_KEY="../keys/sb_key.pem"
+CONFIG_SECURE_BOOT_FLASH_BOOTLOADER_DEFAULT=y
+# QEMU demo only: keep ROM download mode open so espefuse can read the virtual eFuses (step 5).
+# Default (and what a product should use) is Secure Download Mode, which makes espefuse fail with
+# "Secure Download Mode is enabled. The tool can not read eFuses."
+CONFIG_SECURE_INSECURE_ALLOW_DL_MODE=y

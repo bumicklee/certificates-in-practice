@@ -1,0 +1,80 @@
+menu "Cert Lab (course demo)"
+
+    choice LAB_MODE
+        prompt "Demo mode"
+        default LAB_MODE_SERVER_CHECK
+        help
+            Selects which lecture demo this firmware performs.
+
+        config LAB_MODE_SERVER_CHECK
+            bool "13-1 server certificate check (HTTPS GET to the PC lab server)"
+        config LAB_MODE_MTLS_MQTT
+            bool "13-2 mTLS MQTT to the local Mosquitto, with heap measurement"
+        config LAB_MODE_SIGNED_OTA
+            bool "13-3 signed OTA + rollback"
+    endchoice
+
+    menu "Network"
+        config LAB_WIFI_SSID
+            string "Wi-Fi SSID"
+            default "CHANGE_ME_SSID"
+        config LAB_WIFI_PASSWORD
+            string "Wi-Fi password"
+            default "CHANGE_ME_PASSWORD"
+        config LAB_SERVER_IP
+            string "PC LAN IP (same value as given to make_pki.sh)"
+            default "CHANGE_ME_PC_LAN_IP"
+        config LAB_NTP_SERVER
+            string "SNTP server"
+            default "pool.ntp.org"
+        config LAB_SKIP_SNTP
+            bool "Skip SNTP (clock stays near 1970: shows the time failure)"
+            default n
+        config LAB_MIN_VALID_EPOCH
+            int "Clock counts as valid after this UNIX time (2024-01-01 = 1704067200)"
+            default 1704067200
+    endmenu
+
+    menu "13-1 HTTPS server check"
+        config LAB_PORT_GOOD
+            int "Port: server cert from the lab chain, correct name"
+            default 8443
+        config LAB_PORT_WRONGNAME
+            int "Port: server cert from the lab chain, WRONG name"
+            default 8444
+        config LAB_PORT_ROGUE
+            int "Port: server cert from an UNKNOWN root"
+            default 8445
+    endmenu
+
+    menu "13-2 mTLS MQTT"
+        config LAB_MQTT_PORT
+            int "Broker mTLS port"
+            default 8883
+        choice LAB_MQTT_CERT
+            prompt "Client certificate the board presents"
+            default LAB_MQTT_CERT_VALID
+            config LAB_MQTT_CERT_VALID
+                bool "dev-001 (valid)"
+            config LAB_MQTT_CERT_NONE
+                bool "none (broker should refuse)"
+            config LAB_MQTT_CERT_EXPIRED
+                bool "dev-expired (expired)"
+        endchoice
+    endmenu
+
+    menu "13-3 signed OTA"
+        config LAB_OTA_PORT
+            int "OTA server port (good-cert listener)"
+            default 8443
+        config LAB_OTA_PATH
+            string "OTA image path on the server"
+            default "/ota/latest.bin"
+        config LAB_OTA_CHECK_AT_BOOT
+            bool "Ask the OTA server for a different version at boot"
+            default y
+        config LAB_SELFTEST_FORCE_FAIL
+            bool "BAD build: self-test always fails (triggers rollback)"
+            default n
+    endmenu
+endmenu

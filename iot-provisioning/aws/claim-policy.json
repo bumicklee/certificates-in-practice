@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    { "Effect": "Allow", "Action": "iot:Connect", "Resource": "arn:aws:iot:ap-northeast-2:111122223333:client/SN-*" },
+    {
+      "Effect": "Allow",
+      "Action": ["iot:Publish", "iot:Receive"],
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:111122223333:topic/$aws/certificates/create-from-csr/*",
+        "arn:aws:iot:ap-northeast-2:111122223333:topic/$aws/provisioning-templates/boiler-template/provision/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iot:Subscribe",
+      "Resource": [
+        "arn:aws:iot:ap-northeast-2:111122223333:topicfilter/$aws/certificates/create-from-csr/*",
+        "arn:aws:iot:ap-northeast-2:111122223333:topicfilter/$aws/provisioning-templates/boiler-template/provision/*"
+      ]
+    }
+  ]
+}

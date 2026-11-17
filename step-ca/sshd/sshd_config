@@ -1,0 +1,12 @@
+# 11·12편: SSH 사용자 인증서만으로 들어오게 하는 최소 설정
+Port 22
+HostKey /etc/ssh/ssh_host_ed25519_key
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PubkeyAuthentication yes
+AuthorizedKeysFile none
+# step-ca의 SSH 사용자 CA 공개키. 이 CA가 서명한 인증서면 들어온다
+TrustedUserCAKeys /etc/ssh/user_ca.pub
+# 인증서의 principal 목록에 로그인 계정 이름이 있어야 한다(기본 동작)
+LogLevel VERBOSE
+Subsystem sftp internal-sftp

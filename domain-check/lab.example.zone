@@ -1,0 +1,42 @@
+; 실습용 가짜 영역 파일. 실제 DNS에 올리지 않는다. 모든 이름과 주소는 문서용(.example, 192.0.2.0/24).
+$ORIGIN lab.example.
+$TTL 300
+@        IN SOA  ns1 hostmaster 2026103101 3600 600 604800 300
+@        IN NS   ns1
+ns1      IN A    192.0.2.53
+@        IN A    192.0.2.10
+www      IN CNAME lab.example.
+shop     IN A    192.0.2.20
+
+; --- 외부 서비스로 가는 별칭들 ---
+blog       IN CNAME lab-blog.pages.fakecloud.example.         ; 지금도 쓰는 정적 사이트
+status     IN CNAME lab.statuspage.fakesaas.example.          ; 지금도 쓰는 상태 페이지
+promo-2025 IN CNAME promo2025-lab.sites.fakecloud.example.    ; 행사 끝나고 사이트만 지움
+assets     IN CNAME lab-assets.bucket.fakestorage.example.    ; 버킷 지움
+old-api    IN CNAME api-lab-7f3a.apps.fakecloud.example.      ; 앱 지움
+docs       IN CNAME help                                      ; 영역 안 별칭 → help
+help       IN CNAME lab-help.desk.fakesaas.example.           ; 헬프데스크 해지
+partner    IN CNAME gw.partner.example.                       ; 모르는 외부(목록에 없는 제공자)
+
+; --- 하위 영역 위임 ---
+dev        IN NS ns-1234.fakedns.example.                     ; 클라우드 DNS 영역을 지웠는데 위임은 남음
+dev        IN NS ns-5678.fakedns.example.
+
+; --- CAA: 좋은 설계 (영역 꼭대기) ---
+@  IN CAA 0 issue "letsencrypt.org; accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/0000000000; validationmethods=dns-01,http-01"
+@  IN CAA 0 issuewild ";"
+@  IN CAA 0 iodef "mailto:security@lab.example"
+
+; --- CAA: 흔한 실수 예 (하위 이름마다 따로 둠) ---
+typo     IN CAA 0 issue "letsencrpyt.org"
+typo     IN A   192.0.2.30
+badiodef IN CAA 0 issue "letsencrypt.org"
+badiodef IN CAA 0 iodef "security@lab.example"
+badiodef IN A   192.0.2.31
+badvm    IN CAA 0 issue "letsencrypt.org; validationmethods=dns01"
+badvm    IN A   192.0.2.32
+crit     IN CAA 128 tbs "unknown"
+crit     IN CAA 0 issue "letsencrypt.org"
+crit     IN A   192.0.2.33
+open     IN CAA 0 iodef "mailto:security@lab.example"
+open     IN A   192.0.2.34

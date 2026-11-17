@@ -1,0 +1,4 @@
+{
+  "targetArn": "arn:aws:lambda:ap-northeast-2:111122223333:function:boiler-pre-provisioning-hook",
+  "payloadVersion": "2020-04-01"
+}

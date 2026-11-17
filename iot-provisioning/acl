@@ -1,0 +1,20 @@
+# ---- 공용 클레임 인증서: 프로비저닝 토픽만 (AWS의 $aws/certificates/create/*, $aws/provisioning-templates/<t>/provision/* 자리)
+user claim-factory-line-1
+topic deny devices/#
+pattern write $prov/%u/%c/provision
+pattern read  $prov/%u/%c/provision/accepted
+pattern read  $prov/%u/%c/provision/rejected
+
+# ---- 프로비저닝 서비스
+user prov-service
+topic read  $prov/+/+/provision
+topic write $prov/+/+/provision/accepted
+topic write $prov/+/+/provision/rejected
+
+# ---- 텔레메트리 수신 백엔드
+user telemetry-backend
+topic read devices/+/telemetry
+
+# ---- 기기: 인증서 CN(%u) = 사물 이름. 자기 토픽만 (AWS 정책 변수 ${iot:Connection.Thing.ThingName} 자리)
+pattern write devices/%u/telemetry
+pattern read  devices/%u/commands

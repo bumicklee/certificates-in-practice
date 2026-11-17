@@ -1,0 +1,2 @@
+# same as sdkconfig.sb, but images are signed with the second practice key
+CONFIG_SECURE_BOOT_SIGNING_KEY="../keys/other_key.pem"

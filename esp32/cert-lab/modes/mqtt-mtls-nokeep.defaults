@@ -1,0 +1,5 @@
+# 13-2 variant (course 편 23): same as mqtt-mtls, but mbedTLS frees the peer (broker) certificate after the handshake.
+# Compare the [HEAP] lines with mqtt-mtls.
+CONFIG_LAB_MODE_MTLS_MQTT=y
+CONFIG_LAB_MQTT_CERT_VALID=y
+CONFIG_MBEDTLS_SSL_KEEP_PEER_CERTIFICATE=n

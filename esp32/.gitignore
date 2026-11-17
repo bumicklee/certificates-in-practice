@@ -1,0 +1,8 @@
+demo-pki/
+build/
+ota-images/
+cert-lab/sdkconfig*
+!cert-lab/sdkconfig.defaults*
+!cert-lab/modes/
+dependencies.lock
+managed_components/

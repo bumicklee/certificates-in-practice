@@ -1,0 +1,4 @@
+# nginx와 ACME 클라이언트(lego)를 한 컨테이너에 둔다. 실제 서버에 certbot을 까는 것과 같은 모양이다.
+FROM nginx:1.30.6-alpine
+COPY --from=goacme/lego:v5.5.2 /lego /usr/local/bin/lego
+RUN mkdir -p /var/www/acme/.well-known/acme-challenge /data/lego

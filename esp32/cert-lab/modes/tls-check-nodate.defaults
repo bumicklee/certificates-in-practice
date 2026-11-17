@@ -1,0 +1,4 @@
+# 13-1 variant (course 편 21): same as tls-check, but the certificate validity-date check is OFF.
+# ESP-IDF's own default. Shows that a board with a 1970 clock then accepts the server silently. Unsafe: demo only.
+CONFIG_LAB_MODE_SERVER_CHECK=y
+CONFIG_MBEDTLS_HAVE_TIME_DATE=n

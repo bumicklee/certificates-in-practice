@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 앱 쪽 "신뢰 묶음": localhost에만 실습 루트를 믿는다. 그 밖의 이름(127.0.0.1 포함)은 기본(시스템 루트)만. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config>
+        <domain includeSubdomains="false">localhost</domain>
+        <trust-anchors>
+            <certificates src="@raw/lab_root" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

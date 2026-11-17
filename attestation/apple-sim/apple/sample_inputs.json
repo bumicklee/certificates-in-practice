@@ -1,0 +1,8 @@
+{
+ "appIDPrefix": "1234567890",
+ "bundleID": "com.example.myapp",
+ "serverChallenge": "example_server_challenge",
+ "keyId": "zgSY9YSD+7TaDXssY6WlOPVS1K3Lmk+pFhlcSWE+ZV0=",
+ "source": "https://developer.apple.com/documentation/devicecheck/attestation-object-validation-guide",
+ "fetched": "2026-10-31"
+}

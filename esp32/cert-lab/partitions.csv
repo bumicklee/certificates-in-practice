@@ -1,0 +1,7 @@
+# Name,   Type, SubType, Offset,  Size, Flags
+# 4 MB flash layout with two OTA slots (bootloader at 0x2000, table at 0x8000 on ESP32-C5)
+nvs,      data, nvs,     0x10000, 0x6000,
+otadata,  data, ota,     0x16000, 0x2000,
+phy_init, data, phy,     0x18000, 0x1000,
+ota_0,    app,  ota_0,   0x20000, 0x1A0000,
+ota_1,    app,  ota_1,   0x1C0000, 0x1A0000,

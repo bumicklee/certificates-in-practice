@@ -1,0 +1,13 @@
+plugins { id 'com.android.application' }
+// 어느 Network Security Config를 넣을지 고른다: nsc_main(기본) · nsc_pin_wrong · nsc_pin_right
+def labNsc = project.findProperty('labNsc') ?: 'nsc_main'
+android {
+    namespace 'lab.tlscheck'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'lab.tlscheck'; minSdk 28; targetSdk 35; versionCode 1; versionName '1.0'
+        manifestPlaceholders = [labNsc: "@xml/" + labNsc]
+        resValue 'string', 'lab_nsc', labNsc
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}

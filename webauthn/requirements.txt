@@ -1,0 +1,2 @@
+# webauthn 실습: lab/.venv 의 webauthn(3.0.1)·fastapi·uvicorn·httpx·cryptography 사용. 추가 설치 없음
+cbor2  # webauthn 의존성으로 이미 설치됨

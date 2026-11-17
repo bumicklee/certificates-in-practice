@@ -1,0 +1,5 @@
+keys/
+out/
+app/sdkconfig
+app/sdkconfig.old
+app/build/

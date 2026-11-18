@@ -1,6 +1,6 @@
 # lab/step-ca — 사내 CA(step-ca): 오프라인 루트, 짧은 수명 인증서, 이름 제약, SSH 사용자 인증서
 
-11·12편 실습 폴더입니다. 26편(IoT 프로비저닝)도 이 폴더의 CA를 **읽기 전용으로** 다시 씁니다.
+수업 5-1·5-2 실습 폴더입니다. 수업 9-1(IoT 프로비저닝)도 이 폴더의 CA를 **읽기 전용으로** 다시 씁니다.
 
 ## 무엇을 하나
 
@@ -42,7 +42,7 @@ cd lab/step-ca
 
 비밀번호 파일(`*-pass.txt`, `secrets/password`)에는 `fake-lab-password-only`가 들어 있습니다. 실습용입니다.
 
-## 26편에서 다시 쓸 때
+## 수업 9-1에서 다시 쓸 때
 
 - `03-up.sh`로 CA만 띄우고, 루트는 `out/online/root.crt`, CA 주소는 컨테이너 안에서 `https://ca.lab.example:9000`(네트워크 `pki-lab-step`), 호스트에서 `https://127.0.0.1:18430`입니다.
 - 프로비저너: `admin@lab.example`(JWK, 비밀번호 `out/stepca/secrets/prov-password`), `acme`(ACME), `sshpop`.

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 24편 시나리오 전체: 이미지 만들기 → 공장 출고 → 루트 교체 → OTA(정상·위조·롤백·자체 시험 실패) → 시각 모름
+# 수업 8-4 시나리오 전체: 이미지 만들기 → 공장 출고 → 루트 교체 → OTA(정상·위조·롤백·자체 시험 실패) → 시각 모름
 #   ./run_demo.sh 2>&1 | tee ../results/16-ota-demo.txt
 set -uo pipefail
 cd "$(dirname "$0")"

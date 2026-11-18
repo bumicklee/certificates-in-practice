@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 5편(교차 서명·중간 누락)과 17편(CA:TRUE 리프) 시연용 사슬을 out/ 에 만든다.
+# 수업 3-2(교차 서명·중간 누락)과 수업 7-1(CA:TRUE 리프) 시연용 사슬을 out/ 에 만든다.
 # 공용 사슬(../private-ca/out)은 읽기만 하고 고치지 않는다.
 #   ./make_demo.sh          # 만들기(있으면 다시 만든다)
 set -euo pipefail
@@ -38,7 +38,7 @@ key leaf.key
 openssl req -new -key leaf.key -subj "/CN=api.lab.example" -out leaf.csr
 openssl x509 -req -in leaf.csr -CA inter-by-Y.crt -CAkey inter.key -CAcreateserial -days 90 -sha256 -extfile leaf.ext -out leaf.crt 2>/dev/null
 
-# 17편: AIA·CRL 배포 지점이 들어간 리프 (주소는 가짜 실습 도메인)
+# 수업 7-1: AIA·CRL 배포 지점이 들어간 리프 (주소는 가짜 실습 도메인)
 cat > leaf-aia.ext <<'X'
 basicConstraints=critical,CA:FALSE
 keyUsage=critical,digitalSignature
@@ -62,7 +62,7 @@ X
 openssl req -new -key rootY.key -subj "/O=Lab Example Trust/CN=Lab New Root Y1" -out rootY.csr
 openssl x509 -req -in rootY.csr -CA rootX.crt -CAkey rootX.key -CAcreateserial -days 1825 -sha256 -extfile xroot.ext -out rootY-by-X.crt 2>/dev/null
 
-# --- 17편: CA:TRUE 가 잘못 들어간 "리프" ---
+# --- 수업 7-1: CA:TRUE 가 잘못 들어간 "리프" ---
 # (a) pathlen 제한이 없는 중간 CA 아래에 CA:TRUE 리프 -> 그 리프가 남의 이름을 찍어 낸다
 cat > ca-nolimit.ext <<'X'
 basicConstraints=critical,CA:TRUE

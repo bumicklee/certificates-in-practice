@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""27·28편: 실제 Android 기기에서 나온 공개 시험용 증명 사슬을 읽고 서버 검증 체크리스트를 돌린다.
+"""수업 9-2·9-3: 실제 Android 기기에서 나온 공개 시험용 증명 사슬을 읽고 서버 검증 체크리스트를 돌린다.
 
   ../../.venv/bin/python -I verify_real.py            # 4개 사슬 전부
   ../../.venv/bin/python -I verify_real.py --fields   # KeyDescription 필드도 출력

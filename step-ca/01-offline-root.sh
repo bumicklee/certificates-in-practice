@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 11·12편 ①: 루트는 "오프라인 PC"에서 만든다. 여기서는 네트워크가 없는 컨테이너(--network none)로 흉내 낸다.
+# 수업 5-1·5-2 ①: 루트는 "오프라인 PC"에서 만든다. 여기서는 네트워크가 없는 컨테이너(--network none)로 흉내 낸다.
 # 루트 키는 out/offline/ 에만 남는다. 실무라면 이 폴더는 USB·금고·HSM으로 가고, 온라인 서버에는 root.crt만 간다.
 set -euo pipefail
 cd "$(dirname "$0")"; source env.sh

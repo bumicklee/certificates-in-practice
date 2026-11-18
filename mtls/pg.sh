@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 14·15편 곁가지: PostgreSQL sslmode. require는 "암호화만", verify-full이어야 "누구와"까지 확인한다.
+# 수업 6-2·6-3 곁가지: PostgreSQL sslmode. require는 "암호화만", verify-full이어야 "누구와"까지 확인한다.
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 export PGPASSWORD=fake-lab-password-only   # 실습용 가짜 비밀번호

@@ -1,4 +1,4 @@
-# supply-chain (31편)
+# supply-chain (수업 10-1)
 
 로컬 레지스트리 + cosign 키 쌍 서명·검증. 공개 Sigstore(Rekor·Fulcio·TSA)에는 아무것도 올리지 않는다.
 

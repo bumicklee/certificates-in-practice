@@ -1,4 +1,4 @@
-# attestation (27편)
+# attestation (수업 9-2)
 
 기기 증명을 **서버(검증하는 쪽)** 입장에서 봅니다. 기기는 없고, 가짜 루트·가짜 기기가 만든 사슬을 검증 코드가 받아 판단합니다. 네트워크도 쓰지 않습니다.
 
@@ -7,8 +7,8 @@
 
 더 깊이 보기(하위 폴더)
 
-- `android-real/` (27·28편): 진짜 Android 시험용 증명 사슬 4개 + Google 루트·폐기 목록으로 KeyDescription 파싱과 체크리스트 12줄
-- `apple-sim/` (29편): Apple 예제 증명 객체를 진짜 Apple 루트로 검증 + 가짜 루트 App Attest 시뮬레이터
+- `android-real/` (수업 9-2·9-3): 진짜 Android 시험용 증명 사슬 4개 + Google 루트·폐기 목록으로 KeyDescription 파싱과 체크리스트 12줄
+- `apple-sim/` (수업 9-4): Apple 예제 증명 객체를 진짜 Apple 루트로 검증 + 가짜 루트 App Attest 시뮬레이터
 
 ## 준비물
 

@@ -1,4 +1,4 @@
-"""10·32편 실습: 127.0.0.1에 TLS 서버 3개를 한 프로세스로 띄운다(18494·18495·18496)."""
+"""수업 4-4·10-2 실습: 127.0.0.1에 TLS 서버 3개를 한 프로세스로 띄운다(18494·18495·18496)."""
 import pathlib, socket, ssl, threading, time
 
 F = pathlib.Path(__file__).parent / "fixtures/tls"

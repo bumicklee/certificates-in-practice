@@ -1,4 +1,4 @@
-"""ES256 JWT + JWKS(kid) 키 교체를 한 번에 돌려 본다(6편).
+"""ES256 JWT + JWKS(kid) 키 교체를 한 번에 돌려 본다(수업 3-3).
 
 127.0.0.1:18410 에 JWKS 엔드포인트(/.well-known/jwks.json)를 띄우고,
 검증 쪽은 PyJWKClient로 그 주소에서 공개키를 받아 검증한다.

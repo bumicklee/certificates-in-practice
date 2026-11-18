@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 14·15편 ①: X-Client-Cert 헤더 위조. 인증서는 공개 정보라 "남의 인증서 PEM"은 누구나 가질 수 있다(개인키는 없어도).
+# 수업 6-2·6-3 ①: X-Client-Cert 헤더 위조. 인증서는 공개 정보라 "남의 인증서 PEM"은 누구나 가질 수 있다(개인키는 없어도).
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 PY=../.venv/bin/python

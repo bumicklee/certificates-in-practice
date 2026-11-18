@@ -1,4 +1,4 @@
-"""30편 실습: .well-known 점검 스크립트.
+"""수업 9-5 실습: .well-known 점검 스크립트.
 
   python check.py https://localhost:18492 --cert keys/app-signing.crt --package example.lab.shop
 

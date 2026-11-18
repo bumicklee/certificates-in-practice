@@ -1,4 +1,4 @@
-"""10·32편 실습: "내 인증서 만료 목록" 한 표로 모으기.
+"""수업 4-4·10-2 실습: "내 인증서 만료 목록" 한 표로 모으기.
 
   python inventory.py --endpoint 127.0.0.1:18494 ... --pem-dir DIR --kube-pki DIR --k8s-secrets DIR [--warn 30] [--prom out.prom]
 

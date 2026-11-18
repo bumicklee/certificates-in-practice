@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 9·10편: 갱신 판단(ARI) → 강제 갱신 + deploy hook(reload) → 끊김 없는지 확인
+# 수업 4-3·4-4: 갱신 판단(ARI) → 강제 갱신 + deploy hook(reload) → 끊김 없는지 확인
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 PY=../.venv/bin/python

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 9·10편: CA가 "지금 바꿔라"라고 알리는 경우. 폐기된 인증서의 ARI 창이 어떻게 바뀌는지 본다.
+# 수업 4-3·4-4: CA가 "지금 바꿔라"라고 알리는 경우. 폐기된 인증서의 ARI 창이 어떻게 바뀌는지 본다.
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 PY=../.venv/bin/python; CA=out/pebble-api-minica.pem

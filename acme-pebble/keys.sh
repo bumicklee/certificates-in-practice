@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 7·8편: 계정 키와 인증서 키는 다른 키다. 개인키 내용은 찍지 않고 공개키 지문만 비교한다.
+# 수업 4-1·4-2: 계정 키와 인증서 키는 다른 키다. 개인키 내용은 찍지 않고 공개키 지문만 비교한다.
 set -euo pipefail
 cd "$(dirname "$0")"
 W=pki-lab-acme-web; A=accounts/pebble_14000/admin@lab.example

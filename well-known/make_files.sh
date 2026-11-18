@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 30편 실습: .well-known 파일 세트를 만든다.
+# 수업 9-5 실습: .well-known 파일 세트를 만든다.
 #   site/            올바른 세트
 #   site-broken/     일부러 틀린 세트(지문 다름, security.txt 만료, JWKS에 개인키 값, 잘못된 Content-Type)
 #   keys/            가짜 앱 서명 인증서 2개(앱용·디버그용), JWT 서명 키 (실습 전용, 문서에 붙이지 않는다)

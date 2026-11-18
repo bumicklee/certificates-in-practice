@@ -1,4 +1,4 @@
-# cert-inventory (10·32편)
+# cert-inventory (수업 4-4·10-2)
 
 "내 인증서 만료 목록"을 한 표로 모은다. TLS 엔드포인트, PEM 폴더, kubeadm 모양 pki 폴더(+kubeconfig), 쿠버네티스 TLS 비밀값 YAML.
 
@@ -12,7 +12,7 @@
 ../.venv/bin/python inventory.py --endpoint 내호스트:443 --pem-dir /etc/ssl/내폴더 --warn 30   # 내 환경에
 ```
 
-## testssl.sh (10·32편)
+## testssl.sh (수업 4-4·10-2)
 `../nginx-hardening/run.sh start` 뒤 `../nginx-hardening/README.md`의 `docker run ... drwetter/testssl.sh:3.2@sha256:69ceb759...` 명령, 끝나면 `../nginx-hardening/run.sh stop`. 결과: `../results/22-testssl.txt`
 
 ## 정리

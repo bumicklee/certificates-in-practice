@@ -1,6 +1,6 @@
 # lab/acme-pebble — 로컬 ACME 발급·갱신·ARI (Pebble)
 
-7·8·9·10편 실습 폴더입니다. 진짜 도메인 없이 Let's Encrypt와 같은 프로토콜(RFC 8555)로 발급·갱신하고, ARI(RFC 9773) 응답을 봅니다.
+수업 4-1·4-2·4-3·4-4 실습 폴더입니다. 진짜 도메인 없이 Let's Encrypt와 같은 프로토콜(RFC 8555)로 발급·갱신하고, ARI(RFC 9773) 응답을 봅니다.
 
 ## 구성
 
@@ -21,11 +21,11 @@ Docker, 호스트의 `curl`·`openssl`·`dig`, `../.venv/bin/python`(cryptograph
 ```bash
 cd lab/acme-pebble
 ./up.sh              # 세 컨테이너 띄우기
-./issue-http01.sh    # 7·8편: HTTP-01로 shop.lab.example 발급 → nginx TLS        → ../results/06-http01.txt
-./issue-dns01.sh     # 7·8편: *.lab.example — HTTP-01 거절, DNS-01(exec 훅) 발급  → ../results/06-dns01.txt
-./keys.sh            # 7·8편: 계정 키와 인증서 키가 다르다(공개키 지문만 출력)    → ../results/06-keys.txt
-./renew.sh           # 9·10편: ARI 창 보기, 평소 실행은 건너뜀, 강제 갱신+reload 훅, 무중단 확인 → ../results/07-renew.txt
-./ari-revoke.sh      # 9·10편: 폐기하면 ARI 창이 "지금"으로 당겨지고 lego가 바로 갱신 → ../results/07-ari-revoke.txt
+./issue-http01.sh    # 수업 4-1·4-2: HTTP-01로 shop.lab.example 발급 → nginx TLS        → ../results/06-http01.txt
+./issue-dns01.sh     # 수업 4-1·4-2: *.lab.example — HTTP-01 거절, DNS-01(exec 훅) 발급  → ../results/06-dns01.txt
+./keys.sh            # 수업 4-1·4-2: 계정 키와 인증서 키가 다르다(공개키 지문만 출력)    → ../results/06-keys.txt
+./renew.sh           # 수업 4-3·4-4: ARI 창 보기, 평소 실행은 건너뜀, 강제 갱신+reload 훅, 무중단 확인 → ../results/07-renew.txt
+./ari-revoke.sh      # 수업 4-3·4-4: 폐기하면 ARI 창이 "지금"으로 당겨지고 lego가 바로 갱신 → ../results/07-ari-revoke.txt
 ./down.sh            # 정리
 ```
 

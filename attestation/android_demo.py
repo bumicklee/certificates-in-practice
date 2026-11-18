@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""27편 Android식 키 증명: 가짜 기기 → 서버 검증. 루트 교체(옛 RSA 루트 + 새 P-384 루트)를 재현한다.
+"""수업 9-2 Android식 키 증명: 가짜 기기 → 서버 검증. 루트 교체(옛 RSA 루트 + 새 P-384 루트)를 재현한다.
    ../.venv/bin/python android_demo.py
 """
 import json, os

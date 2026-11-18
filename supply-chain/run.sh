@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 31편 실습: 로컬 레지스트리 + cosign 키 쌍 서명·검증 (공개 Sigstore에 아무것도 올리지 않는다)
+# 수업 10-1 실습: 로컬 레지스트리 + cosign 키 쌍 서명·검증 (공개 Sigstore에 아무것도 올리지 않는다)
 #
 # 안전장치 두 겹
 #   1) cosign sign --tlog-upload=false --use-signing-config=false  (Rekor·Fulcio·TSA를 쓰지 않음)

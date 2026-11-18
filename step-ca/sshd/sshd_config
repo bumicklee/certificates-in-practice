@@ -1,4 +1,4 @@
-# 11·12편: SSH 사용자 인증서만으로 들어오게 하는 최소 설정
+# 수업 5-1·5-2: SSH 사용자 인증서만으로 들어오게 하는 최소 설정
 Port 22
 HostKey /etc/ssh/ssh_host_ed25519_key
 PasswordAuthentication no

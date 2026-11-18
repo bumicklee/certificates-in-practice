@@ -1,4 +1,4 @@
-# iot-provisioning/aws (26편, AWS 실계정용 · 선택)
+# iot-provisioning/aws (수업 9-1, AWS 실계정용 · 선택)
 
 이 폴더의 파일은 **AWS를 부르지 않고 작성했습니다.** 로컬에서 실제로 돌린 것은 훅 Lambda 단위 시험뿐입니다(`../../results/17-hook-unittest.txt`). 실계정에서 돌린 결과는 `【직접 해 보기: AWS】`로 남깁니다. 계정 ID `111122223333`, 리전 `ap-northeast-2`, ARN은 모두 예시 값입니다.
 

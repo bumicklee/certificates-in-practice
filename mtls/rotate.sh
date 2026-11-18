@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 14·15편 ④: 클라이언트 CA 무중단 교체. R1만 → R1+R2(겹치는 기간) → R2만. 바꿀 때마다 nginx -s reload.
+# 수업 6-2·6-3 ④: 클라이언트 CA 무중단 교체. R1만 → R1+R2(겹치는 기간) → R2만. 바꿀 때마다 nginx -s reload.
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 ROOT=$PCA/root.crt

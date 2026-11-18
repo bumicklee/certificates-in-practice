@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""로컬 프로비저닝 서비스 (26편). AWS IoT 플릿 프로비저닝(클레임 방식)의 흐름을 Mosquitto 위에서 흉내 낸다.
+"""로컬 프로비저닝 서비스 (수업 9-1). AWS IoT 플릿 프로비저닝(클레임 방식)의 흐름을 Mosquitto 위에서 흉내 낸다.
 
   요청: $prov/<클레임 신원>/<clientId>/provision           {"csr": PEM, "parameters": {"SerialNumber": ...}}
   응답: $prov/<클레임 신원>/<clientId>/provision/accepted  {"thingName", "certificateId", "certificatePem"}

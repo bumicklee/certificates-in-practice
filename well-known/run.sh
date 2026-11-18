@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 30편 실습: 파일 만들기 → 두 서버 띄우기 → 점검 → 서버 끄기
+# 수업 9-5 실습: 파일 만들기 → 두 서버 띄우기 → 점검 → 서버 끄기
 set -euo pipefail
 cd "$(dirname "$0")"
 PY=../.venv/bin/python

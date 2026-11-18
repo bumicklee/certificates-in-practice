@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 30편 실습: 서버를 띄우고 demo.py를 돌린 뒤 서버를 끈다.
+# 수업 9-5 실습: 서버를 띄우고 demo.py를 돌린 뒤 서버를 끈다.
 set -euo pipefail
 cd "$(dirname "$0")"
 PY=../.venv/bin/python

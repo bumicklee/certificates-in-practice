@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 26편 시나리오: 브로커·서비스·백엔드를 띄우고 성공 1 + 실패 5를 본 뒤 모두 끈다.
+# 수업 9-1 시나리오: 브로커·서비스·백엔드를 띄우고 성공 1 + 실패 5를 본 뒤 모두 끈다.
 #   ./run_demo.sh > ../results/17-provisioning-demo.txt 2>&1
 set -uo pipefail
 cd "$(dirname "$0")"

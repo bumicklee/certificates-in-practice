@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 10·32편 실습: 가짜 인증서 만들기 → TLS 서버 3개 → 만료 목록 → 서버 끄기
+# 수업 4-4·10-2 실습: 가짜 인증서 만들기 → TLS 서버 3개 → 만료 목록 → 서버 끄기
 set -uo pipefail
 cd "$(dirname "$0")"
 PY=../.venv/bin/python

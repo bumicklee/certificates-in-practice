@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""27편 Matter식 PAA → PAI → DAC 검증. DCL은 로컬 JSON 파일(out/dcl.json).
+"""수업 9-2 Matter식 PAA → PAI → DAC 검증. DCL은 로컬 JSON 파일(out/dcl.json).
    ../.venv/bin/python matter_demo.py
 """
 import json, os

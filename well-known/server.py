@@ -1,4 +1,4 @@
-"""30편 실습: .well-known 파일을 HTTPS로 내보내는 작은 서버 (127.0.0.1에만).
+"""수업 9-5 실습: .well-known 파일을 HTTPS로 내보내는 작은 서버 (127.0.0.1에만).
 
   python server.py site 18492         # 올바른 세트
   python server.py site-broken 18493  # 틀린 세트

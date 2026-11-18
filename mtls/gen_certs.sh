@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# 13·14·15편용 추가 인증서를 out/ 에 만든다. ../private-ca/out/ 은 읽기만 한다(고치지 않는다).
+# 수업 6-1·6-2·6-3용 추가 인증서를 out/ 에 만든다. ../private-ca/out/ 은 읽기만 한다(고치지 않는다).
 #   out/ok/          orders 클라이언트(private-ca가 만든 client.crt) + 중간 CA 사슬
 #   out/payments/    같은 사내 중간 CA가 발급, SAN URI spiffe://lab.example/payments (인증은 되지만 /orders 인가는 안 됨)
 #   out/expired/     같은 중간 CA, SAN은 orders, 그런데 이미 만료
 #   out/otherca/     전혀 다른 루트(Other Lab Root)가 발급한 orders 인증서
-#   out/ca2/         교체용 새 루트 R2 + 그 아래 orders 클라이언트 (14·15편 무중단 교체)
-#   out/pg/          PostgreSQL용 자체 서명 인증서(CN=wrong.example) (14·15편 sslmode 비교)
+#   out/ca2/         교체용 새 루트 R2 + 그 아래 orders 클라이언트 (수업 6-2·6-3 무중단 교체)
+#   out/pg/          PostgreSQL용 자체 서명 인증서(CN=wrong.example) (수업 6-2·6-3 sslmode 비교)
 set -euo pipefail
 cd "$(dirname "$0")"
 PCA=../private-ca/out

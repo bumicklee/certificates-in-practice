@@ -1,4 +1,4 @@
-# lab/tls13 — TLS 1.3 관찰 (3·4편)
+# lab/tls13 — TLS 1.3 관찰 (수업 2-2·3-1)
 
 무엇: 공용 사설 사슬(`lab/private-ca/out`)로 127.0.0.1:18400에 `openssl s_server`를 띄우고, `curl -v`·`s_client -msg/-trace`로 핸드셰이크를 본다. 그룹(X25519, P-256, X25519MLKEM768)별 key_share 크기를 비교하고, 연결마다 임시 키가 바뀌는지(PFS) 확인한다.
 
@@ -12,7 +12,7 @@ openssl s_client -connect 127.0.0.1:18400 -servername shop.lab.example \
   -CAfile ../private-ca/out/ca-bundle.pem -msg </dev/null | grep -E '^(<<<|>>>)'
 ./compare_groups.sh                     # 그룹별 key_share 크기·협상 결과
 ./pfs_check.sh                          # 세 번 접속, 서버 임시 공개키 비교
-../.venv/bin/python peek_relay.py       # 127.0.0.1:18402 중계, 중간에서 보이는 바이트 요약(3·4편)
+../.venv/bin/python peek_relay.py       # 127.0.0.1:18402 중계, 중간에서 보이는 바이트 요약(수업 2-2·3-1)
 #   다른 창: curl --cacert ../private-ca/out/ca-bundle.pem -X POST -d 'card=FAKE-4111-0000' https://localhost:18402/login
 ./server.sh stop
 ```

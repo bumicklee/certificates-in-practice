@@ -1,4 +1,4 @@
-# ct-watch: 공개 CT 검색과 새 발급 알림 (20편)
+# ct-watch: 공개 CT 검색과 새 발급 알림 (수업 7-4)
 
 ## 무엇
 - `ct_search.py` — crt.sh JSON(`?q=<도메인>&output=json&exclude=expired`)을 **읽기만** 한다. 결과는 `../results/15-crtsh-<도메인>.json`에 캐시하고, 캐시가 있으면 요청하지 않는다. `--refresh`일 때만 1회 요청(실패하면 15초 뒤 1회만 다시).
@@ -17,7 +17,7 @@
 ```
 결과 파일(직접 돌리면 생김): `../results/15-crtsh-example.com.json`(crt.sh 응답 그대로), `../results/15-ct-search.txt`, `../results/15-ct-watch.txt`
 
-`--expect-issuer Sectigo`는 실습용 **가정**이다. example.com 운영자가 실제로 어떤 CA를 쓰기로 했는지는 모른다. 내 도메인에는 CAA에 적은 CA와 같게 둔다(18편).
+`--expect-issuer Sectigo`는 실습용 **가정**이다. example.com 운영자가 실제로 어떤 CA를 쓰기로 했는지는 모른다. 내 도메인에는 CAA에 적은 CA와 같게 둔다(수업 7-2).
 
 ## 내 도메인에 쓰려면
 - 하루 1~2회 cron/CI로 `ct_search.py <내 도메인> --refresh` → `ct_watch.py <내 도메인> --expect-issuer <우리 CA>`.

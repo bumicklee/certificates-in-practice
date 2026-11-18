@@ -1,4 +1,4 @@
-# well-known (30편)
+# well-known (수업 9-5)
 
 `.well-known` 파일 세트(assetlinks.json, apple-app-site-association, openid-configuration, jwks.json, security.txt, change-password, webauthn)와 점검 스크립트.
 

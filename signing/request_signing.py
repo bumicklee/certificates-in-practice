@@ -1,4 +1,4 @@
-"""작은 API 요청 서명 예(6편). 실제 표준은 RFC 9421 HTTP Message Signatures를 보라.
+"""작은 API 요청 서명 예(수업 3-3). 실제 표준은 RFC 9421 HTTP Message Signatures를 보라.
 
 클라이언트가 '메서드 + 경로 + 시각 + nonce + 본문 해시'를 ECDSA P-256으로 서명하고,
 서버는 공개키로 검증한 뒤 시각 허용 범위(300초)와 nonce 재사용을 본다.

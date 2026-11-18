@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 7·8편: 와일드카드는 DNS-01만 된다. HTTP-01로 시도 → 거절, DNS-01로 시도 → 발급
+# 수업 4-1·4-2: 와일드카드는 DNS-01만 된다. HTTP-01로 시도 → 거절, DNS-01로 시도 → 발급
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 docker exec pki-lab-acme-web sh -c "rm -f /data/lego/certificates/_.lab.example.*"  # 다시 돌릴 수 있게

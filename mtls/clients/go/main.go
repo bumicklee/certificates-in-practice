@@ -1,4 +1,4 @@
-// 13편: Go mTLS 클라이언트. Python과 같은 다섯 경우를 부른다.
+// 수업 6-1: Go mTLS 클라이언트. Python과 같은 다섯 경우를 부른다.
 //
 //	cd clients/go && go run . [https://localhost:18440/orders]
 package main

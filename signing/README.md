@@ -1,4 +1,4 @@
-# lab/signing — 전자서명 실습 (6편)
+# lab/signing — 전자서명 실습 (수업 3-3)
 
 무엇: ES256 JWT와 JWKS(`kid`) 키 교체, HS256 vs ES256 위조 비교, 작은 API 요청 서명, 로컬 TSA(RFC 3161) 타임스탬프.
 

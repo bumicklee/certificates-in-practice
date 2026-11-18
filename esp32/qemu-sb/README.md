@@ -1,4 +1,4 @@
-# qemu-sb: Secure Boot v2 and flash encryption in QEMU (course demo ep.25)
+# qemu-sb: Secure Boot v2 and flash encryption in QEMU (course demo lesson 8-5)
 
 **QEMU only.** Everything here runs on the Mac in Espressif's QEMU (`qemu-system-riscv32 -M esp32c3`). The eFuses
 are a 1 KB file (`out/efuse-*.bin`) that you can delete. Nothing opens a serial port: `espefuse.py` only talks

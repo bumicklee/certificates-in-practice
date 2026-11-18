@@ -28,7 +28,7 @@
 
     <!-- 3) 디버그 빌드(android:debuggable=true)에서만 더하는 신뢰. 릴리스 빌드는 이 부분을 무시한다.
          여기 CA로 서명된 사슬에는 피닝도 적용되지 않는다(공식 문서). 개발 서버용 CA만 넣는다.
-         dev_ca.pem 은 이 예제에 없다. 팀의 개발용 사설 CA(11·12편 step-ca 등)를 넣는다 -->
+         dev_ca.pem 은 이 예제에 없다. 팀의 개발용 사설 CA(수업 5-1·5-2 step-ca 등)를 넣는다 -->
     <debug-overrides>
         <trust-anchors>
             <certificates src="@raw/dev_ca" />

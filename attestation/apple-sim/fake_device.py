@@ -1,4 +1,4 @@
-"""29편: App Attest 모양을 흉내 내는 '가짜 기기'. Apple과 무관한 실습용이다.
+"""수업 9-4: App Attest 모양을 흉내 내는 '가짜 기기'. Apple과 무관한 실습용이다.
 
 - 루트는 가짜: 'FAKE App Attestation Root CA (lab, not Apple)'. 진짜 Apple 루트 키는 Apple만 가진다
 - 실제 기기에서는 키가 Secure Enclave에서 만들어지고, 인증서는 Apple 서버가 발급한다.

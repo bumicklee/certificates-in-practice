@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""27·28편: 받아 둔 Google 증명 폐기 목록(google/status.json)의 모양을 본다. 일련번호는 줄여서 보인다.
+"""수업 9-2·9-3: 받아 둔 Google 증명 폐기 목록(google/status.json)의 모양을 본다. 일련번호는 줄여서 보인다.
   curl -s -D google/status.headers -o google/status.json https://android.googleapis.com/attestation/status
   ../../.venv/bin/python -I show_status.py
 """

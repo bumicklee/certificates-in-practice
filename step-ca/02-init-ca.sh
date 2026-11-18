@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 11·12편 ②: 온라인 서버에 step-ca를 차린다. 루트 키 없이 root.crt + 중간 CA만 쓴다.
+# 수업 5-1·5-2 ②: 온라인 서버에 step-ca를 차린다. 루트 키 없이 root.crt + 중간 CA만 쓴다.
 set -euo pipefail
 cd "$(dirname "$0")"; source env.sh
 [[ -f out/online/inter.crt ]] || ./01-offline-root.sh

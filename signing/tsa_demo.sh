@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 로컬 TSA(RFC 3161) 타임스탬프 시연(6편). 모두 out/ 아래에 만든다. 네트워크 없음.
+# 로컬 TSA(RFC 3161) 타임스탬프 시연(수업 3-3). 모두 out/ 아래에 만든다. 네트워크 없음.
 #
 #  1) 문서 서명용 사슬: 서명 루트 → 서명자 인증서(수명 1일)
 #  2) TSA 사슬: TSA 루트 → TSA 인증서(EKU critical timeStamping)

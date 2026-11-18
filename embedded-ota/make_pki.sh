@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 24편 실습용 키와 사슬을 out/ 에 만든다. 가짜 이름만 쓴다.
+# 수업 8-4 실습용 키와 사슬을 out/ 에 만든다. 가짜 이름만 쓴다.
 #   out/ota/ota_sign.key, ota_sign.pub   OTA 이미지 서명 키(ECDSA P-256). 실제로는 HSM·AWS Signer 안에 둔다
 #   out/wrong/wrong.key                  위조 실험용 "다른" 서명 키
 #   out/r1/  Lab Boiler Root R1 → Issuing I1 → 서버 리프 (옛 사슬)

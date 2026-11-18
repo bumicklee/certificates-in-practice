@@ -1,4 +1,4 @@
-# domain-check: 매달린 CNAME 점검과 CAA 설계 (18편)
+# domain-check: 매달린 CNAME 점검과 CAA 설계 (수업 7-2)
 
 ## 무엇
 - `lab.example.zone` — 가짜 영역 파일. 외부 서비스로 가는 CNAME 여러 개, 지운 클라우드 DNS로 가는 NS 위임, CAA 좋은 예와 흔한 실수 예가 들어 있다. 이름은 모두 `.example`, 주소는 문서용 `192.0.2.0/24`.

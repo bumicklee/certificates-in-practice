@@ -1,4 +1,4 @@
-# broken-chains: 일부러 깨뜨린 사슬 다섯 가지와 비밀값 검사 (5·17편)
+# broken-chains: 일부러 깨뜨린 사슬 다섯 가지와 비밀값 검사 (수업 3-2·7-1)
 
 ## 무엇
 - `make_broken.sh` — 정상 3단 사슬(`../private-ca/make_chain.sh`를 `OUT=out/base`로 불러 만든다. `lab/private-ca`는 건드리지 않는다) 위에 깨진 사슬을 만든다.

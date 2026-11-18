@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""29편 App Attest 서버 검증 실습.
+"""수업 9-4 App Attest 서버 검증 실습.
   ../../.venv/bin/python -I demo.py
 
 A. Apple 문서의 예제 증명 객체(진짜 Apple 사슬)를 진짜 Apple App Attestation Root CA로 검증

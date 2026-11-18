@@ -1,4 +1,4 @@
-"""30편 실습: localhost WebAuthn 서버 (py_webauthn).
+"""수업 9-5 실습: localhost WebAuthn 서버 (py_webauthn).
 
 RP ID = localhost, 허용 출처 = http://localhost:18490 하나뿐.
 127.0.0.1:18490에만 묶는다. 저장소는 메모리(재시작하면 사라짐).

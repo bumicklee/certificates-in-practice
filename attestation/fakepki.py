@@ -1,4 +1,4 @@
-"""27편 공용: 가짜 CA·인증서를 메모리에서 만드는 작은 도우미. 실제 제조사·Google 키와 무관하다."""
+"""수업 9-2 공용: 가짜 CA·인증서를 메모리에서 만드는 작은 도우미. 실제 제조사·Google 키와 무관하다."""
 import datetime as dt
 from cryptography import x509
 from cryptography.hazmat.primitives import hashes, serialization

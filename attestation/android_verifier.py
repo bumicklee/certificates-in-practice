@@ -1,4 +1,4 @@
-"""서버 쪽 키 증명 검증 골격 (Android Key Attestation 모양). 27편.
+"""서버 쪽 키 증명 검증 골격 (Android Key Attestation 모양). 수업 9-2.
 
 진짜 Android와 같은 점
   - 기기가 보낸 인증서 사슬 [리프(증명 대상 키), 중간…, 루트]를 서버가 검증한다

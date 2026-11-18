@@ -1,4 +1,4 @@
-# mobile-pins: Network Security Config와 SPKI 핀 계산 (19편)
+# mobile-pins: Network Security Config와 SPKI 핀 계산 (수업 7-3)
 
 ## 무엇
 - `network_security_config.template.xml` — Android Network Security Config 예제 틀
@@ -34,4 +34,4 @@ rm -rf out res
 ```
 
 ## 안전 범위
-클라이언트 쪽 검증(피닝 포함)은 기기를 가진 사람이 우회할 수 있다는 **사실**만 다룬다. 우회 방법·후킹 스크립트·시스템 CA 주입 절차는 다루지 않는다. 대책은 서버 쪽 증명(27편)이다.
+클라이언트 쪽 검증(피닝 포함)은 기기를 가진 사람이 우회할 수 있다는 **사실**만 다룬다. 우회 방법·후킹 스크립트·시스템 CA 주입 절차는 다루지 않는다. 대책은 서버 쪽 증명(수업 9-2)이다.

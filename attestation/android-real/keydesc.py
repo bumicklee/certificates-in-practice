@@ -1,4 +1,4 @@
-"""27·28편: Android 키 증명 확장(KeyDescription, OID 1.3.6.1.4.1.11129.2.1.17)을 읽는 작은 DER 파서.
+"""수업 9-2·9-3: Android 키 증명 확장(KeyDescription, OID 1.3.6.1.4.1.11129.2.1.17)을 읽는 작은 DER 파서.
 
 스키마 출처: https://source.android.com/docs/security/features/keystore/attestation (KeyDescription v500)
 열거값 출처: AOSP hardware/interfaces/security/keymint/aidl (KeyPurpose, Algorithm, KeyOrigin, Digest, EcCurve)

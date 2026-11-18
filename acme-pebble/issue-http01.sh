@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 7·8편: HTTP-01로 shop.lab.example 발급 → nginx에서 TLS로 열고 확인
+# 수업 4-1·4-2: HTTP-01로 shop.lab.example 발급 → nginx에서 TLS로 열고 확인
 set -euo pipefail
 cd "$(dirname "$0")"; source env.sh
 echo "== 1) ACME 디렉터리(호스트에서 보기)"

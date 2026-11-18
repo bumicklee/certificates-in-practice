@@ -1,4 +1,4 @@
-"""29편: App Attest 서버 검증 (Apple 문서 'Validating apps that connect to your server'의 단계 순서).
+"""수업 9-4: App Attest 서버 검증 (Apple 문서 'Validating apps that connect to your server'의 단계 순서).
 
   verify_attestation()  증명 객체(CBOR) → 공개키·receipt를 돌려준다. 실패하면 Reject
   verify_assertion()    이후 요청마다 오는 assertion(CBOR) 검증. 카운터가 늘어야 한다

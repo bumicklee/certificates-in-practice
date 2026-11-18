@@ -1,4 +1,4 @@
-# lab/chain-demo — 교차 서명·중간 누락·CA:TRUE 리프 (5·17편)
+# lab/chain-demo — 교차 서명·중간 누락·CA:TRUE 리프 (수업 3-2·7-1)
 
 무엇: 공용 사슬(`lab/private-ca/out`)은 **읽기만** 하고, 시연용 사슬은 이 폴더의 `out/`에 따로 만든다.
 
@@ -17,7 +17,7 @@ cd lab/chain-demo
 ../.venv/bin/python verify_by_hand.py
 ```
 
-서버가 중간 인증서를 빠뜨리는 경우(5편):
+서버가 중간 인증서를 빠뜨리는 경우(수업 3-2):
 
 ```bash
 openssl s_server -accept 127.0.0.1:18403 -cert ../private-ca/out/leaf.crt -key ../private-ca/out/leaf.key -www &

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 11·12편 ④: SSH 사용자 인증서 — 발급, ssh-keygen -L, sshd(TrustedUserCAKeys)로 로그인
+# 수업 5-1·5-2 ④: SSH 사용자 인증서 — 발급, ssh-keygen -L, sshd(TrustedUserCAKeys)로 로그인
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 mkdir -p out/ssh; rm -f out/ssh/id_ecdsa*

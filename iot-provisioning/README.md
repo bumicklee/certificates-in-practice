@@ -1,4 +1,4 @@
-# iot-provisioning (26편)
+# iot-provisioning (수업 9-1)
 
 AWS IoT 플릿 프로비저닝(클레임 방식)을 **로컬 Mosquitto 위에서** 재현합니다. 공용 클레임 인증서를 가진 기기가 키를 스스로 만들고, CSR을 보내 기기별 인증서를 받고, 그 인증서로 다시 접속해 **자기 토픽만** 씁니다. AWS는 부르지 않습니다. 실계정용 파일은 [`aws/`](aws/README.md)에 있습니다.
 

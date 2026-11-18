@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 11·12편 ③: 짧은 수명 인증서 발급 세 가지 — step ca certificate(JWK 토큰), ACME(lego), step ca renew(가진 인증서로 갱신)
+# 수업 5-1·5-2 ③: 짧은 수명 인증서 발급 세 가지 — step ca certificate(JWK 토큰), ACME(lego), step ca renew(가진 인증서로 갱신)
 set -uo pipefail
 cd "$(dirname "$0")"; source env.sh
 mkdir -p out/issued
@@ -31,7 +31,7 @@ openssl x509 -in out/issued/api.crt -noout -serial
 CLI step ca renew issued/api.crt issued/api.key $COMMON --force 2>&1
 openssl x509 -in out/issued/api.crt -noout -serial -dates
 
-echo; echo "== 5) ACME(HTTP-01)로 web.lab.example 발급 — 7·8편의 lego를 그대로 사내 CA에 붙인다"
+echo; echo "== 5) ACME(HTTP-01)로 web.lab.example 발급 — 수업 4-1·4-2의 lego를 그대로 사내 CA에 붙인다"
 rm -rf out/lego
 docker run --rm --network $NET --network-alias web.lab.example -v "$PWD/out:/work" -w /work \
   -e LEGO_CA_CERTIFICATES=/work/online/root.crt $LEGO run --accept-tos --email ops@lab.example \

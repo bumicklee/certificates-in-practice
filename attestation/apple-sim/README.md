@@ -1,4 +1,4 @@
-# apple-sim (29편)
+# apple-sim (수업 9-4)
 
 App Attest **서버 검증**을 기기 없이 봅니다.
 

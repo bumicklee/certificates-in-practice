@@ -1,4 +1,4 @@
-"""13편: Python httpx mTLS 클라이언트. 다섯 경우를 차례로 부른다.
+"""수업 6-1: Python httpx mTLS 클라이언트. 다섯 경우를 차례로 부른다.
 
   ../.venv/bin/python clients/client.py [https://localhost:18440/orders]
 """

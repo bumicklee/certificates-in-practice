@@ -1,4 +1,4 @@
-# webauthn (30편)
+# webauthn (수업 9-5)
 
 localhost WebAuthn 등록·로그인과 "출처 묶기" 확인. 브라우저 대신 Python 소프트웨어 인증기(ES256, `none` 증명)가 진짜 형식의 응답을 만든다.
 

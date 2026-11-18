@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 26편 실습용 CA와 인증서를 out/ 에 만든다. 가짜 이름만 쓴다.
+# 수업 9-1 실습용 CA와 인증서를 out/ 에 만든다. 가짜 이름만 쓴다.
 #   out/ca/root.crt               Lab IoT Root (ECDSA P-256)
 #   out/ca/issuing.crt/.key       Lab IoT Device Issuing CA — 프로비저닝 서비스가 기기 인증서에 서명할 때 쓴다
 #   out/broker/                   Mosquitto 서버 인증서 (SAN mqtt.iot.lab.example, localhost, 127.0.0.1)

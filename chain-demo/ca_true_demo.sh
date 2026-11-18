@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 17편: CA:TRUE 가 잘못 들어간 리프가 남의 이름(bank.lab.example) 인증서를 찍어 내는지 본다.
+# 수업 7-1: CA:TRUE 가 잘못 들어간 리프가 남의 이름(bank.lab.example) 인증서를 찍어 내는지 본다.
 cd "$(dirname "$0")"
 P=../private-ca/out; D=out
 run() { echo "\$ $*"; "$@" 2>&1; echo "(exit=$?)"; echo; }

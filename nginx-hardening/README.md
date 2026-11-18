@@ -1,4 +1,4 @@
-# nginx-hardening: 127.0.0.1 전용 TLS 하드닝 nginx (16편, 10·32편)
+# nginx-hardening: 127.0.0.1 전용 TLS 하드닝 nginx (수업 6-4, 수업 4-4·10-2)
 
 ## 무엇
 - `conf/default.conf` — Mozilla SSL Configuration Generator "intermediate"(guidelines 6.0)를 바탕으로 한 설정
@@ -25,7 +25,7 @@ curl -sI http://localhost:18451/
 ./run.sh stop
 ```
 
-### 다른 편에서 쓸 때 (10·32편 testssl.sh)
+### 다른 편에서 쓸 때 (수업 4-4·10-2 testssl.sh)
 `./run.sh start` 후 `127.0.0.1:18450`을 점검 대상으로 쓰고, 끝나면 `./run.sh stop`. 컨테이너에서 호스트로 붙을 때는
 `host.docker.internal:18450`을 쓰거나, testssl 컨테이너를 `--network container:pki-lab-nginx-hardening`으로 붙여 `localhost:443`을 본다.
 신뢰 저장소는 `../private-ca/out/ca-bundle.pem`이다.

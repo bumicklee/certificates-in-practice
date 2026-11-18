@@ -1,6 +1,6 @@
 # android-tls-app (lab.tlscheck)
 
-8장(8-1~8-4) 앱 데모용 디버그 앱. 사례 하나마다 `HttpsURLConnection`으로 `https://localhost:<포트>/`에 GET 한 번을 하고,
+섹션 8(8-1~8-4) 앱 데모용 디버그 앱. 사례 하나마다 `HttpsURLConnection`으로 `https://localhost:<포트>/`에 GET 한 번을 하고,
 결과 한 줄을 로그(태그 `TlsLab`)와 화면에 낸다.
 
 ## 준비
